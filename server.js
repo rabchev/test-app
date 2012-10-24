@@ -2,8 +2,7 @@ var express = require('express');
 var brackets = require('node-brackets');
 
 var app = express();
-console.log(brackets);
-app.use('/brackets', brackets.setup());
+app.use('/brackets', brackets());
 
 app.get('/*', function(req, res){
   res.send('Hello World');
