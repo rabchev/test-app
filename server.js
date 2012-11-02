@@ -7,8 +7,10 @@ var brackets = require('node-brackets');
 var app = express();
 app.use('/brackets', brackets());
 
-app.get('/*', function(req, res){
-  res.send('Hello World');
+app.get('/*', function (req, res) {
+    "use strict";
+    
+    res.send('Hello World<br>Yahooooo!!');
 });
 
 app.listen(3000);
