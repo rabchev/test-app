@@ -5,7 +5,7 @@ var express = require('express');
 var brackets = require('node-brackets');
 
 var app = express();
-app.use('/brackets', brackets());
+app.use('/brackets', brackets(["./views", "./styles", "./controlers", "./scripts", "./images"]));
 
 app.get('/*', function (req, res) {
     "use strict";
